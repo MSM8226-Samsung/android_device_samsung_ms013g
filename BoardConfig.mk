@@ -29,7 +29,7 @@ BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardwa
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
-TARGET_KERNEL_SOURCE := kernel/samsung/msm8226
+TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
 TARGET_KERNEL_CONFIG := msm8226-sec_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_ms013g_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
@@ -47,4 +47,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
+
+#bliss
+TARGET_TC_ROM := 4.9-sm
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_TC_KERNEL := 4.8-sm
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 
