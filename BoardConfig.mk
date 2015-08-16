@@ -15,8 +15,6 @@
 # Inherit from msm8226-common
 -include device/samsung/msm8226-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := ms013g,ms01lte
-
 LOCAL_PATH := device/samsung/ms013g
 
 # Bluetooth
@@ -51,6 +49,10 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 #bliss
 TARGET_TC_ROM := 4.9-sm
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
-TARGET_TC_KERNEL := 4.8-sm
+TARGET_TC_KERNEL := 4.9-sm
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
-
+BLISS_O3 := true
+BLISS_GRAPHITE := true
+BLISS_STRICT := true
+BLISS_KRAIT := true
+BLISS_PIPE := true
