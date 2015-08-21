@@ -19,34 +19,36 @@
 	<ctl name="SLIM RX6 MUX" value="0" />
 	<ctl name="SLIM RX7 MUX" value="0" />
 
+	<ctl name="SLIM_0_RX_Voice Mixer CSVoice" value="0" />
+	<ctl name="SLIM_0_RX_Voice Mixer Voip" value="0" />
+
 	<!-- cp2 call part -->
 	<ctl name="SLIM_0_RX_Voice Mixer Voice2" value="0" />
 	<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voice2" value="0" />
 	<!-- end of cp2 call part -->
-	<!-- cp1 call part -->
+
 	<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer CSVoice" value="0" />
  	<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voip" value="0" />
-	<!-- end of cp1 call part -->
 
-	<ctl name="RX2 MIX2 INP2" value="0" />
-	<ctl name="RX2 MIX2 INP1" value="0" />
-	<ctl name="RX1 MIX2 INP2" value="0" />
-	<ctl name="RX1 MIX2 INP1" value="0" />
-	<ctl name="RX7 MIX1 INP2" value="0" />
-	<ctl name="RX7 MIX1 INP1" value="0" />
-	<ctl name="RX6 MIX1 INP2" value="0" />
-	<ctl name="RX6 MIX1 INP1" value="0" />
-	<ctl name="RX5 MIX1 INP2" value="0" />
-	<ctl name="RX5 MIX1 INP1" value="0" />
-	<ctl name="RX4 MIX1 INP2" value="0" />
-	<ctl name="RX4 MIX1 INP1" value="0" />
-	<ctl name="RX3 MIX1 INP2" value="0" />
-	<ctl name="RX3 MIX1 INP1" value="0" />
-	<ctl name="RX2 MIX1 INP2" value="0" />
-	<ctl name="RX2 MIX1 INP1" value="0" />
-	<ctl name="RX1 MIX1 INP3" value="0" />
-	<ctl name="RX1 MIX1 INP2" value="0" />
-	<ctl name="RX1 MIX1 INP1" value="0" />
+	<ctl name="RX2 MIX2 INP2" value="ZERO" />
+	<ctl name="RX2 MIX2 INP1" value="ZERO" />
+	<ctl name="RX1 MIX2 INP2" value="ZERO" />
+	<ctl name="RX1 MIX2 INP1" value="ZERO" />
+	<ctl name="RX7 MIX1 INP2" value="ZERO" />
+	<ctl name="RX7 MIX1 INP1" value="ZERO" />
+	<ctl name="RX6 MIX1 INP2" value="ZERO" />
+	<ctl name="RX6 MIX1 INP1" value="ZERO" />
+	<ctl name="RX5 MIX1 INP2" value="ZERO" />
+	<ctl name="RX5 MIX1 INP1" value="ZERO" />
+	<ctl name="RX4 MIX1 INP2" value="ZERO" />
+	<ctl name="RX4 MIX1 INP1" value="ZERO" />
+	<ctl name="RX3 MIX1 INP2" value="ZERO" />
+	<ctl name="RX3 MIX1 INP1" value="ZERO" />
+	<ctl name="RX2 MIX1 INP2" value="ZERO" />
+	<ctl name="RX2 MIX1 INP1" value="ZERO" />
+	<ctl name="RX1 MIX1 INP3" value="ZERO" />
+	<ctl name="RX1 MIX1 INP2" value="ZERO" />
+	<ctl name="RX1 MIX1 INP1" value="ZERO" />
 
 	<ctl name="HPHL DAC Switch" value="0" />
 	<ctl name="DAC1 Switch" value="0" />
@@ -75,37 +77,36 @@
 	<ctl name="MultiMedia1 Mixer SLIM_4_TX" value="0" />
 	<ctl name="MultiMedia1 Mixer INTERNAL_BT_SCO_TX" value="0" />
 
-	<!-- cp1 call part -->
 	<ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="0" />
 	<ctl name="Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice" value="0" />
-	<!-- end of cp1 call part -->
+
 	<!-- cp2 call part -->
 	<ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="0" />
 	<ctl name="Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2" value="0" />
 	<!-- end of cp2 call part -->
 	
 
-	<ctl name="SLIM TX10 MUX" value="0" />
-	<ctl name="SLIM TX9 MUX" value="0" />
-	<ctl name="SLIM TX8 MUX" value="0" />
-	<ctl name="SLIM TX7 MUX" value="0" />
-	<ctl name="SLIM TX6 MUX" value="0" />
-	<ctl name="SLIM TX5 MUX" value="0" />
-	<ctl name="SLIM TX4 MUX" value="0" />
-	<ctl name="SLIM TX3 MUX" value="0" />
-	<ctl name="SLIM TX2 MUX" value="0" />
-	<ctl name="SLIM TX1 MUX" value="0" />
+	<ctl name="SLIM TX10 MUX" value="ZERO" />
+	<ctl name="SLIM TX9 MUX" value="ZERO" />
+	<ctl name="SLIM TX8 MUX" value="ZERO" />
+	<ctl name="SLIM TX7 MUX" value="ZERO" />
+	<ctl name="SLIM TX6 MUX" value="ZERO" />
+	<ctl name="SLIM TX5 MUX" value="ZERO" />
+	<ctl name="SLIM TX4 MUX" value="ZERO" />
+	<ctl name="SLIM TX3 MUX" value="ZERO" />
+	<ctl name="SLIM TX2 MUX" value="ZERO" />
+	<ctl name="SLIM TX1 MUX" value="ZERO" />
 
-	<ctl name="DEC10 MUX" value="0" />
-	<ctl name="DEC9 MUX" value="0" />
-	<ctl name="DEC8 MUX" value="0" />
-	<ctl name="DEC7 MUX" value="0" />
-	<ctl name="DEC6 MUX" value="0" />
-	<ctl name="DEC5 MUX" value="0" />
-	<ctl name="DEC4 MUX" value="0" />
-	<ctl name="DEC3 MUX" value="0" />
-	<ctl name="DEC2 MUX" value="0" />
-	<ctl name="DEC1 MUX" value="0" />
+	<ctl name="DEC10 MUX" value="ZERO" />
+	<ctl name="DEC9 MUX" value="ZERO" />
+	<ctl name="DEC8 MUX" value="ZERO" />
+	<ctl name="DEC7 MUX" value="ZERO" />
+	<ctl name="DEC6 MUX" value="ZERO" />
+	<ctl name="DEC5 MUX" value="ZERO" />
+	<ctl name="DEC4 MUX" value="ZERO" />
+	<ctl name="DEC3 MUX" value="ZERO" />
+	<ctl name="DEC2 MUX" value="ZERO" />
+	<ctl name="DEC1 MUX" value="ZERO" />
         <ctl name="IIR1 INP1 Volume" value="0" />
         <ctl name="IIR1 INP2 Volume" value="84" />
         <ctl name="IIR1 INP3 Volume" value="84" />
