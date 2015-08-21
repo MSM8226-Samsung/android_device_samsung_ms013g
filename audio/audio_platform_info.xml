@@ -46,6 +46,7 @@
     </acdb_ids>
 
     <backend_names>
+	<!-- empty -->
     </backend_names>
 
     <pcm_ids>
@@ -61,10 +62,6 @@
         <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" alias="TTY-full" />
         <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" alias="TTY-headset" />
         <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" alias="TTY-handset" />
-	<!-- Dual SIM OUT -->
-        <device name="SND_DEVICE_OUT_VOICE2_HANDSET" alias="voice-call-cp2-handset" />
-        <device name="SND_DEVICE_OUT_VOICE2_SPEAKER" alias="voice-call-cp2-speaker" />
-        <device name="SND_DEVICE_OUT_VOICE2_HEADPHONES" alias="voice-call-cp2-headset" />
 
         <!-- Input devices -->
         <device name="SND_DEVICE_IN_HANDSET_MIC" alias="rec-main-mic" />
