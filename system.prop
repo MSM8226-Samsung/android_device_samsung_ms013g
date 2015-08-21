@@ -1,17 +1,19 @@
 # System.prop for ms013g
 
 # RIL
-rild.libpath=/system/lib/libsec-ril.so
-rild.libargs=-d /dev/smd0
-
 telephony.lteOnGsmDevice=0
 ro.telephony.default_network=3
-ro.multi.rild=true
-persist.dsds.enabled=true
+ro.telephony.ril.config=newDialCode
 persist.radio.multisim.config=dsds
-persist.multisim.config=dsds
-ro.telephony.ril_class=SamsungMSM8226DSRIL
+ro.multisim.simslotcount=2
+ro.sec_ril.version=50
+ro.multisim.set_audio_params=true
 
+#ro.telephony.ril_class=SamsungMSM8226DSRIL
+
+#Radio
+rild.libpath=/system/lib/libsec-ril.so
+rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
