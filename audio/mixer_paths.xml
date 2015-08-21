@@ -11,13 +11,13 @@
 	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia5" value="0" />
 	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia10" value="0" />
 
-	<ctl name="SLIM RX1 MUX" value="0" />
-	<ctl name="SLIM RX2 MUX" value="0" />
-	<ctl name="SLIM RX3 MUX" value="0" />
-	<ctl name="SLIM RX4 MUX" value="0" />
-	<ctl name="SLIM RX5 MUX" value="0" />
-	<ctl name="SLIM RX6 MUX" value="0" />
-	<ctl name="SLIM RX7 MUX" value="0" />
+	<ctl name="SLIM RX1 MUX" value="ZERO" />
+	<ctl name="SLIM RX2 MUX" value="ZERO" />
+	<ctl name="SLIM RX3 MUX" value="ZERO" />
+	<ctl name="SLIM RX4 MUX" value="ZERO" />
+	<ctl name="SLIM RX5 MUX" value="ZERO" />
+	<ctl name="SLIM RX6 MUX" value="ZERO" />
+	<ctl name="SLIM RX7 MUX" value="ZERO" />
 
 	<ctl name="SLIM_0_RX_Voice Mixer CSVoice" value="0" />
 	<ctl name="SLIM_0_RX_Voice Mixer Voip" value="0" />
@@ -285,21 +285,7 @@
 	<path name="incall-rec-uplink-and-downlink">
 		<ctl name="MultiMedia1 Mixer VOC_REC_UL" value="1" />
 		<ctl name="MultiMedia1 Mixer VOC_REC_DL" value="1" />
-	</path>
-	
-	<path name="incall-rec-uplink-cp2">
-		<path name="incall-rec-uplink" />
-	</path>
-
-	<path name="incall-rec-downlink-cp2">
-		<path name="incall-rec-downlink" />
-	</path>
-	
-	<path name="incall-rec-uplink-and-downlink-cp2">
-		<path name="incall-rec-uplink" />
-		<path name="incall-rec-downlink" />
-	</path>
-	
+	</path>	
 	<!-- end of Verb -->
 
 	<!-- ================================================================ -->
@@ -696,89 +682,6 @@
 		<ctl name="RX1 Digital Volume" value="87" />
 		<ctl name="RX2 Digital Volume" value="87" />
 	    <ctl name="COMP1 Switch" value="0" />
-	</path>
-	
-	<path name="voice-call-cp2-handset">
-		<path name="rcv" />
-		<ctl name="EAR PA Gain" value="POS_2_DB" />
-		<ctl name="RX1 Digital Volume" value="83" />
-	</path>
-
-	<path name="voice2-call-handset">
-		<path name="rcv" />
-		<ctl name="EAR PA Gain" value="POS_2_DB" />
-		<ctl name="RX1 Digital Volume" value="83" />
-	</path>
-
-	<path name="voice-call-cp2-handset-extra-vol">
-		<path name="rcv" />
-		<ctl name="EAR PA Gain" value="POS_2_DB" />
-		<ctl name="RX1 Digital Volume" value="83" />
-	</path>
-
-	<path name="voice-call-cp2-handset-hac">
-		<path name="rcv" />
-		<ctl name="EAR PA Gain" value="POS_3_DB" />
-		<ctl name="RX1 Digital Volume" value="84" />
-	</path>
-
-	<path name="voice-call-cp2-speaker">
-		<path name="spk" />
-		<ctl name="RX4 Digital Volume" value="83" />
-		<ctl name="SPK DRV Volume" value="6" />
-	</path>
-
-	<path name="voice-call-cp2-speaker-extra-vol">
-		<path name="spk" />
-		<ctl name="RX4 Digital Volume" value="83" />
-		<ctl name="SPK DRV Volume" value="6" />
-	</path>
-
-	<path name="voice-call-cp2-headset">
-	    <ctl name="RX1 MIX2 INP1" value="IIR1" />
-		<ctl name="RX2 MIX2 INP1" value="IIR1" />
-		<ctl name="IIR1 INP1 Volume" value="0" />
-		<path name="ear" />
-		<ctl name="HPHL Volume" value="16" />
-		<ctl name="HPHR Volume" value="16" />
-		<ctl name="RX1 Digital Volume" value="87" />
-		<ctl name="RX2 Digital Volume" value="87" />
-	</path>
-
-	<!--  -->
-	<path name="voice2-call-handset-extra-vol">
-		<path name="rcv" />
-		<ctl name="EAR PA Gain" value="POS_2_DB" />
-		<ctl name="RX1 Digital Volume" value="83" />
-	</path>
-
-	<path name="voice2-call-handset-hac">
-		<path name="rcv" />
-		<ctl name="EAR PA Gain" value="POS_3_DB" />
-		<ctl name="RX1 Digital Volume" value="84" />
-	</path>
-
-	<path name="voice2-call-speaker">
-		<path name="spk" />
-		<ctl name="RX4 Digital Volume" value="83" />
-		<ctl name="SPK DRV Volume" value="6" />
-	</path>
-
-	<path name="voice2-call-speaker-extra-vol">
-		<path name="spk" />
-		<ctl name="RX4 Digital Volume" value="83" />
-		<ctl name="SPK DRV Volume" value="6" />
-	</path>
-
-	<path name="voice2-call-headset">
-	    <ctl name="RX1 MIX2 INP1" value="IIR1" />
-		<ctl name="RX2 MIX2 INP1" value="IIR1" />
-		<ctl name="IIR1 INP1 Volume" value="0" />
-		<path name="ear" />
-		<ctl name="HPHL Volume" value="16" />
-		<ctl name="HPHR Volume" value="16" />
-		<ctl name="RX1 Digital Volume" value="87" />
-		<ctl name="RX2 Digital Volume" value="87" />
 	</path>
 
 	<path name="voice-call-dock">
