@@ -21,8 +21,12 @@
 
 	<!-- cp2 call part -->
 	<ctl name="SLIM_0_RX_Voice Mixer Voice2" value="0" />
-	<ctl name="AUX_PCM_RX_Voice Mixer Voice2" value="0" />
+	<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voice2" value="0" />
 	<!-- end of cp2 call part -->
+	<!-- cp1 call part -->
+	<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer CSVoice" value="0" />
+ 	<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voip" value="0" />
+	<!-- end of cp1 call part -->
 
 	<ctl name="RX2 MIX2 INP2" value="0" />
 	<ctl name="RX2 MIX2 INP1" value="0" />
@@ -71,10 +75,15 @@
 	<ctl name="MultiMedia1 Mixer SLIM_4_TX" value="0" />
 	<ctl name="MultiMedia1 Mixer INTERNAL_BT_SCO_TX" value="0" />
 
+	<!-- cp1 call part -->
+	<ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="0" />
+	<ctl name="Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice" value="0" />
+	<!-- end of cp1 call part -->
 	<!-- cp2 call part -->
 	<ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="0" />
-	<ctl name="Voice2_Tx Mixer AUX_PCM_TX_Voice2" value="0" />
+	<ctl name="Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2" value="0" />
 	<!-- end of cp2 call part -->
+	
 
 	<ctl name="SLIM TX10 MUX" value="0" />
 	<ctl name="SLIM TX9 MUX" value="0" />
