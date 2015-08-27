@@ -37,9 +37,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
 TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
-TARGET_KERNEL_CONFIG := msm8226-sec_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_ms013g_eur_defconfig
-TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_ms013g_defconfig
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
