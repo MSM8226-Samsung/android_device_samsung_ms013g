@@ -53,10 +53,28 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 
-#bliss
-TARGET_TC_ROM := 4.9-sm
-TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
-TARGET_TC_KERNEL := 4.9-sm
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+# Block_Build
+Bliss_Build_Block := 1 
+
+# BlissPop Configs
+BLISS_WIPE_CACHES := 0
+BLISSIFY := true
 BLISS_O3 := true
 BLISS_GRAPHITE := true
+BLISS_STRICT := false
+BLISS_PIPE := true
+FLOOP_NEST_OPTIMIZE := true
+ENABLE_GCCONLY := true
+FAST_MATH := true
+ENABLE_MODULAR_O3 := true
+ENABLE_LTO := true
+Link_Time_Optimizations := true
+TARGET_USE_ION_COMPAT := true
+TARGET_TC_ROM := 4.9-sm
+TARGET_TC_KERNEL := 4.9-sm
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+
+#SaberMod
+-include vendor/bliss/config/sm.mk
