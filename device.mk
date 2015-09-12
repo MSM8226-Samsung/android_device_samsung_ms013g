@@ -56,9 +56,7 @@ PRODUCT_COPY_FILES += \
 
 #GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
+    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
 # Wifi
 PRODUCT_PACKAGES += \
