@@ -212,6 +212,9 @@
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
 
+    <!-- Indicate whether the SD card is accessible without removing the battery. -->
+    <bool name="config_batterySdCardAccessibility">true</bool>
+
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
