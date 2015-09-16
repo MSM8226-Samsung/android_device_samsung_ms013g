@@ -25,6 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+import init.qcom.power.rc
 import init.qcom.usb.rc
 import init.target.rc
 import init.carrier.rc
@@ -629,10 +630,6 @@ service audiod /system/bin/audiod
     user system
     group system
 
-service charger /charger
-    class charger
-    critical
-
 on property:vold.decrypt=trigger_restart_framework
     start config_bluetooth
 
@@ -871,6 +868,7 @@ on property:crypto.driver.load=0
     exec /system/bin/rmmod qcedev.ko
     exec /system/bin/rmmod qce.ko
 
+<<<<<<< HEAD
 on charger
     mount_all fstab.qcom
     class_start charger
@@ -987,3 +985,18 @@ on property:sys.perf.profile=2
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
     write /sys/class/devfreq/qcom,cpubw.68/governor performance
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor performance
+=======
+# Dual-sim support
+on property:persist.radio.multisim.config=dsds
+    stop ril-daemon
+    start ril-daemon
+    start ril-daemon2
+
+service ril-daemon2 /system/bin/rild -s rild2 -ds rild-debug1 -l /system/lib/libsec-ril-dsds.so
+    class main
+    socket rild2 stream 660 root radio
+    socket rild-debug1 stream 660 radio system
+    user root
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
+>>>>>>> f7893c1... rootdir: Update power managemenet and charger
