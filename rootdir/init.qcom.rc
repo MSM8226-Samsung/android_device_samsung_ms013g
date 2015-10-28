@@ -27,8 +27,6 @@
 
 import init.qcom.power.rc
 import init.qcom.usb.rc
-import init.target.rc
-import init.carrier.rc
 
 on early-init
 
@@ -44,6 +42,7 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
+    export LD_PRELOAD "/system/lib/libboringssl-compat.so"
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -64,6 +63,7 @@ on fs
 
     # Kickstart the Wireless subsystem
     write /dev/wcnss_wlan 1
+    write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
 
 on post-fs-data
 
@@ -253,6 +253,11 @@ on boot
 
     # IMEI
     mkdir /efs/imei 0775 radio radio
+    restorecon -R /efs
+
+    mkdir /efs/drm/playready 0775
+    chown drm system /efs/drm/playready
+    chmod 0775 /efs/drm/playready
 
     # for BT MAC address
     mkdir /efs/bluetooth 0775 radio system
@@ -440,6 +445,28 @@ on boot
     chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
     chown system radio /sys/class/sensors/accelerometer_sensor/vendor
     chown system radio /sys/class/sensors/accelerometer_sensor/name
+    chown system input /sys/class/input/input3/data
+    chown system input /sys/class/input/input3/delay
+    chown system input /sys/class/input/input3/enable
+    chown system input /sys/class/input/input3/filter_enable
+    chown system input /sys/class/input/input3/modalias
+    chown system input /sys/class/input/input3/name
+    chown system input /sys/class/input/input3/offset
+    chown system input /sys/class/input/input3/phys
+    chown system input /sys/class/input/input3/position
+    chown system input /sys/class/input/input3/properties
+    chown system input /sys/class/input/input3/threshold
+    chown system input /sys/class/input/input5/data
+    chown system input /sys/class/input/input5/delay
+    chown system input /sys/class/input/input5/enable
+    chown system input /sys/class/input/input5/filter_enable
+    chown system input /sys/class/input/input5/modalias
+    chown system input /sys/class/input/input5/name
+    chown system input /sys/class/input/input5/offset
+    chown system input /sys/class/input/input5/phys
+    chown system input /sys/class/input/input5/position
+    chown system input /sys/class/input/input5/properties
+    chown system input /sys/class/input/input5/threshold
 
     # Gyro_sensor
     chown system radio /sys/class/sensors/gyro_sensor/power_on
@@ -453,20 +480,78 @@ on boot
     chown system radio /sys/class/sensors/light_sensor/raw_data
     chown system radio /sys/class/sensors/light_sensor/vendor
     chown system radio /sys/class/sensors/light_sensor/name
+    chown system input /sys/class/input/input5/id
+    chown system input /sys/class/input/input5/poll_delay
 
     # Magnetic_sensor
     chown system radio /sys/class/sensors/magnetic_sensor/selftest
     chown system radio /sys/class/sensors/magnetic_sensor/raw_data
     chown system radio /sys/class/sensors/magnetic_sensor/vendor
     chown system radio /sys/class/sensors/magnetic_sensor/name
+    chown system radio /sys/class/sensors/magnetic_sensor/adc
+    chown system radio /sys/class/sensors/magnetic_sensor/status
+    chown compass input /sys/class/input/input5/dynamic_matrix
+    chown compass input /sys/class/input/input5/offsets
+    chown compass input /sys/class/input/input7/dynamic_matrix
+    chown compass input /sys/class/input/input7/offsets
+    chown system input /sys/class/input/input2/name
+    chown system input /sys/class/input/input2/poll
+    chown system input /sys/class/input/input2/id
+    chown system input /sys/class/input/input4/name
+    chown system input /sys/class/input/input4/poll
+    chown system input /sys/class/input/input4/id
+    chown system input /sys/class/input/input4/data
+    chown system input /sys/class/input/input4/delay
+    chown system input /sys/class/input/input4/enable
+    chown system input /sys/class/input/input4/filter_enable
+    chown system input /sys/class/input/input4/filter_len
+    chown system input /sys/class/input/input4/filter_noise
+    chown system input /sys/class/input/input4/filter_threshold
+    chown system input /sys/class/input/input4/position
+    chown system input /sys/class/input/input5/name
+    chown system input /sys/class/input/input5/poll
+    chown system input /sys/class/input/input5/id
+    chown system input /sys/class/input/input5/distortion
+    chown system input /sys/class/input/input5/self_test
+    chown system input /sys/class/input/input5/threshold
+    chown system input /sys/class/input/input6/name
+    chown system input /sys/class/input/input6/poll
+    chown system input /sys/class/input/input6/id
+    chown system input /sys/class/input/input6/data
+    chown system input /sys/class/input/input6/delay
+    chown system input /sys/class/input/input6/enable
+    chown system input /sys/class/input/input6/filter_enable
+    chown system input /sys/class/input/input6/filter_len
+    chown system input /sys/class/input/input6/filter_noise
+    chown system input /sys/class/input/input6/filter_threshold
+    chown system input /sys/class/input/input6/position
+    chown system input /sys/class/input/input7/distortion
+    chown system input /sys/class/input/input7/self_test
+    chown system input /sys/class/input/input7/threshold
+    chown system input /dev/alps_io
+    chown system input /system/etc/param.dat
+    chown system input /system/etc/alp_cal.dat
 
     # Proximity_sensor
     chown system radio /sys/class/sensors/proximity_sensor/state
     chown system radio /sys/class/sensors/proximity_sensor/prox_avg
     chown system radio /sys/class/sensors/proximity_sensor/prox_cal
+    chown system radio /sys/class/sensors/proximity_sensor/prox_cal2
+    chown system radio /sys/class/sensors/proximity_sensor/prox_offset_pass
     chown system radio /sys/class/sensors/proximity_sensor/prox_tresh
+    chown system radio /sys/class/sensors/proximity_sensor/raw_data
     chown system radio /sys/class/sensors/proximity_sensor/vendor
+    chown system radio /sys/class/sensors/proximity_sensor/state
     chown system radio /sys/class/sensors/proximity_sensor/name
+    chown system input /sys/class/input/input4/enable
+    chown system input /sys/class/input/input4/id
+
+    # mpu6500_input
+    chown system input /sys/class/input/input3/acc_enable
+    chown system input /sys/class/input/input3/acc_delay
+    chown system input /sys/class/input/input3/gyro_enable
+    chown system input /sys/class/input/input3/gyro_delay
+    chown system input /sys/class/input/input3/self_test
 
     # Torch
     chown system system /sys/class/leds/led:flash_torch/brightness
@@ -531,6 +616,8 @@ on boot
     chmod 0664 /sys/class/input/input0/enabled
     chmod 0664 /sys/class/input/input1/enabled
     chmod 0664 /sys/class/input/input2/enabled
+    chown system system /sys/class/sec/sec_touchkey/brightness
+    chmod 0664 /sys/class/sec/sec_touchkey/brightness
 
     # Permission for touchkey
     chown system system /sys/class/sec/sec_touchkey/keypad_enable
@@ -591,7 +678,6 @@ service adsprpcd /system/bin/adsprpcd
     class main
     user media
     group media
-
 
 service atfwd /system/bin/ATFWD-daemon
     class late_start
@@ -720,10 +806,11 @@ service thermal-engine /system/bin/thermal-engine -c /etc/thermal-engine-8226.co
     user root
     group root
 
-service time_daemon /system/bin/time_daemon
-    class late_start
-    user root
-    group root
+service timekeep /system/bin/timekeep restore
+   class late_start
+   user root
+   group root
+   oneshot
 
 service wcnss-service /system/bin/wcnss_service
     class late_start
