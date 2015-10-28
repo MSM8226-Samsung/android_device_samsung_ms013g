@@ -205,7 +205,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!--<integer name="config_deviceHardwareKeys">71</integer>-->
+    <integer name="config_deviceHardwareKeys">71</integer>
 
 <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
@@ -227,11 +227,17 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!--<integer name="config_deviceHardwareWakeKeys">65</integer>-->
+    <integer name="config_deviceHardwareWakeKeys">65</integer>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
     <bool name="skip_restoring_network_selection">true</bool>
+
+    <!-- The RadioAccessFamilies supported by the device.
+         Empty is viewed as "all".  Only used on devices which
+         don't support RIL_REQUEST_GET_RADIO_CAPABILITY
+         format is UMTS|LTE|... -->
+    <string translatable="false" name="config_radio_access_family">GSM|WCDMA</string>
 
     <!-- Performance profiles -->
     <!--<string name="config_perf_profile_prop">sys.perf.profile</string>
