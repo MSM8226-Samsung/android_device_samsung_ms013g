@@ -667,12 +667,13 @@ service at_distributor /system/bin/at_distributor
     group radio log
 	
 # for multi rild
-service ril-daemon2 /system/bin/rild -s rild2 -ds rild-debug1 -l /system/lib/libsec-ril-dsds.so
+service ril-daemon1 /system/bin/rild -c 2
     class main
     socket rild2 stream 660 root radio
-    socket rild-debug1 stream 660 radio system
+    socket rild-debug2 stream 660 radio system
     user root
     group radio cache inet misc audio log qcom_diag sdcard_r shell sdcard_rw system drmrpc
+    disabled
 
 service adsprpcd /system/bin/adsprpcd
     class main
@@ -919,12 +920,5 @@ on property:crypto.driver.load=0
 on property:persist.radio.multisim.config=dsds
     stop ril-daemon
     start ril-daemon
-    start ril-daemon2
+    start ril-daemon1
 
-service ril-daemon2 /system/bin/rild -s rild2 -ds rild-debug1 -l /system/lib/libsec-ril-dsds.so
-    class main
-    socket rild2 stream 660 root radio
-    socket rild-debug1 stream 660 radio system
-    user root
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
