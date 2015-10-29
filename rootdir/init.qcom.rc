@@ -42,7 +42,7 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export LD_PRELOAD "/system/lib/libboringssl-compat.so /system/lib/libsamsung_symbols.so"
+    export LD_PRELOAD "/system/lib/libsamsung_symbols.so"
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -673,7 +673,6 @@ service ril-daemon1 /system/bin/rild -c 2
     socket rild-debug2 stream 660 radio system
     user root
     group radio cache inet misc audio log qcom_diag sdcard_r shell sdcard_rw system drmrpc
-    disabled
 
 service adsprpcd /system/bin/adsprpcd
     class main
