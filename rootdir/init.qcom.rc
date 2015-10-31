@@ -801,7 +801,7 @@ service rmt_storage /system/bin/rmt_storage
 on property:persist.sys.ssr.restart_level=*
     exec /system/bin/sh /init.qcom.ssr.sh ${persist.sys.ssr.restart_level}
 
-service thermal-engine /system/bin/thermal-engine -c /etc/thermal-engine-8226.conf
+service thermal-engine /system/vendor/bin/thermal-engine -c /etc/thermal-engine-8226.conf
     class main
     user root
     group root
