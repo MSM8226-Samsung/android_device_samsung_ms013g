@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     ueventd.qcom.rc
 
+# Radio (RIL)
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    rild.libpath=/system/lib/libsec-ril.so
+
 PRODUCT_PACKAGES += \
     lights.msm8226
 
