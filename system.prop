@@ -1,0 +1,7 @@
+# Radio
+persist.radio.multisim.config=dsds
+ro.multisim.set_audio_params=true
+ro.multisim.simslotcount=2
+ro.telephony.default_network=0,1
+telephony.lteOnGsmDevice=0
+ro.telephony.ril.config=simactivation
