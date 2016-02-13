@@ -23,7 +23,6 @@ AUDIO_FEATURE_SAMSUNG_DUAL_SIM := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
-TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
 TARGET_KERNEL_CONFIG := cyanogenmod_ms013g_defconfig
 
 # Partitions
